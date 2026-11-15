@@ -42,12 +42,12 @@ flowchart TD
     LIBRARIAN ---|1| REL_LB
     REL_LB ---|N| BORROWING
 
-    %% Атрибути book_author (Комбінований ключ — пунктир)
-    ba_bid(["book_id<br/>┈┈┈┈┈┈┈"]):::attr --- BOOK_AUTHOR
-    ba_aid(["author_id<br/>┈┈┈┈┈┈┈┈┈"]):::attr --- BOOK_AUTHOR
+    %% Атрибути book_author (Комбінований ключ)
+    ba_bid(["book_id<br/>_ _ _ _ _"]):::attr --- BOOK_AUTHOR
+    ba_aid(["author_id<br/>_ _ _ _ _ _"]):::attr --- BOOK_AUTHOR
 
     %% Атрибути book
-    b_id(["book_id<br/>───────"]):::attr --- BOOK
+    b_id(["b̲o̲o̲k̲_̲i̲d̲"]):::attr --- BOOK
     b_title([title]):::attr --- BOOK
     b_genre([genre]):::attr --- BOOK
     b_isbn([ISBN]):::attr --- BOOK
@@ -56,19 +56,19 @@ flowchart TD
     b_lang([language]):::attr --- BOOK
 
     %% Атрибути author
-    a_id(["author_id<br/>─────────"]):::attr --- AUTHOR
+    a_id(["a̲u̲t̲h̲o̲r̲_̲i̲d̲"]):::attr --- AUTHOR
     a_name([author_name]):::attr --- AUTHOR
     a_country([country]):::attr --- AUTHOR
 
     %% Атрибути copy
-    c_id(["copy_id<br/>───────"]):::attr --- COPY
+    c_id(["c̲o̲p̲y̲_̲i̲d̲"]):::attr --- COPY
     c_inv([inventory_number]):::attr --- COPY
     c_shelf([shelf_location]):::attr --- COPY
     c_cond([book_condition]):::attr --- COPY
     c_stat([status]):::attr --- COPY
 
     %% Атрибути reader
-    r_id(["reader_id<br/>─────────"]):::attr --- READER
+    r_id(["r̲e̲a̲d̲e̲r̲_̲i̲d̲"]):::attr --- READER
     r_name([reader_name]):::attr --- READER
     r_phone([phone_number]):::attr --- READER
     r_email([email]):::attr --- READER
@@ -76,12 +76,12 @@ flowchart TD
     r_stat([status]):::attr --- READER
 
     %% Атрибути librarian
-    l_id(["librarian_id<br/>────────────"]):::attr --- LIBRARIAN
+    l_id(["l̲i̲b̲r̲a̲r̲i̲a̲n̲_̲i̲d̲"]):::attr --- LIBRARIAN
     l_name([librarian_name]):::attr --- LIBRARIAN
     l_email([email]):::attr --- LIBRARIAN
 
     %% Атрибути borrowing
-    br_id(["borrowing_id<br/>────────────"]):::attr --- BORROWING
+    br_id(["b̲o̲r̲r̲o̲w̲i̲n̲g̲_̲i̲d̲"]):::attr --- BORROWING
     br_bdate([borrow_date]):::attr --- BORROWING
     br_ddate([due_date]):::attr --- BORROWING
     br_rdate([return_date]):::attr --- BORROWING
